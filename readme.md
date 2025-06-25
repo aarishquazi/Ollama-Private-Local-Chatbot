@@ -34,31 +34,34 @@ A private, offline chatbot that can:
    ```bash
    git clone https://github.com/your-username/local-document-chatbot.git
    cd local-document-chatbot
+   ```
 
 2. **Create a virtual environment**
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows: env\Scripts\activate
+   ```
 
-```bash
-    python -m venv env
-    source env/bin/activat
-    
 3. **Install dependencies**
-
-    ```bash
-    pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. **Install and run Ollama**
+   - Download Ollama
+   - Start a model (e.g., llama3)
+   ```bash
+   ollama run llama3
+   ```
 
-    - Download Ollama
+5. **Run the app**
+   ```bash
+   streamlit run main.py
+   ```
 
-    - tart a model (e.g., llama3)
-
-    ```bash
-    ollama run llama3
-    Run the app
-    streamlit run main.py
+---
 
 ## 📌 Notes
 
 - Make sure Ollama is running before starting the app.
-
 - Document-based Q&A is only triggered when your input is a question (classified by the model).
